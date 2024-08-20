@@ -25,5 +25,8 @@ form.addEventListener("submit", (event) => {
   if(idioma === "ingles") {
     saludo = saludoPersonalizadoENG(nombre, edad, genero, hora);
   }
+  if(idioma === "aleman") {
+    saludo = saludoPersonalizadoGER(nombre, edad, genero, hora);
+  }
   div.innerHTML = saludo;
 });
