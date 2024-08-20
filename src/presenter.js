@@ -15,13 +15,15 @@ form.addEventListener("submit", (event) => {
   const genero = genero_input.value;
   const idioma = idioma_input.value;
 
+  let fecha = new Date();
+  let hora = fecha.getHours();
   let saludo = "";
 
   if(idioma === "espanol") {
-    saludo = saludoPersonalizadoESP(nombre, edad, genero);
+    saludo = saludoPersonalizadoESP(nombre, edad, genero, hora);
   }
   if(idioma === "ingles") {
-    saludo = saludoPersonalizadoENG(nombre, edad, genero);
+    saludo = saludoPersonalizadoENG(nombre, edad, genero, hora);
   }
   div.innerHTML = saludo;
 });
