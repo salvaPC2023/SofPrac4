@@ -1,10 +1,20 @@
-export function saludoPersonalizado(nombre, genero) {
+export function saludoPersonalizado(nombre, genero, edad) {
     let saludo = "";
-    if(genero === "masculino") {
-        saludo += "<p>Hola, Señor ";
+    if(edad > 30) {
+        if(genero === "masculino") {
+            saludo += "<p>Hola, señor ";
+            }
+        if(genero === "femenino") {
+            saludo += "<p>Hola, señora ";
         }
-    if(genero === "femenino") {
-        saludo += "<p>Hola, Señora ";
+    }
+        else {
+        if(genero === "masculino") {
+            saludo += "<p>Hola, joven ";
+            }
+        if(genero === "femenino") {
+            saludo += "<p>Hola, señorita ";
+        }
     }
     saludo = saludo + nombre + "</p>";
     return saludo;
